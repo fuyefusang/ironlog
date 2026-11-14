@@ -14,6 +14,8 @@
 - minSdk 26 / targetSdk 36
 - 位置：工作区下的 `ironlog/`（本机路径见 `.gitignore` 之外，仓库内不写绝对路径）
 - 产物：`dist/IronLog-1.0.0.apk`（110.2 KB）、`dist/IronLog-1.0.0-src.zip`
+- **已开源**：<https://github.com/fuyefusang/ironlog>（public，Apache-2.0）
+- **Release**：<https://github.com/fuyefusang/ironlog/releases/latest>，APK 作为附件（112,866 B，SHA-256 `9972445838e589d46693df9a345849aa9cb28708ef6b94f03813bf4df725f3dd`）
 - 签名：`ironlog-debug.keystore`，别名 `ironlog`，密码 `android`
 - 许可：**Apache-2.0**（`LICENSE` 已是官方全文 + `NOTICE`）。2026-11-14 由 GPL-3.0-or-later 改过来
 
@@ -157,6 +159,8 @@ powershell -ExecutionPolicy Bypass -File tools\ui.ps1 -Action text     # 当前�
 注意：`adb shell input tap` 用的是**设备像素**，截图预览常被缩放，按预览坐标点会偏；一律用 `tools/ui.ps1` 按文字点击。
 
 **新会话怎么接**：镜像和 AVD 都在 `tools/` 里，直接按上面命令启动 → `adb install -r dist/IronLog-1.0.0.apk` → `am start -n com.ironlog.train/.ui.MainActivity` → `tools/ui.ps1` 走查。不要重新下载 645 MB。
+
+**推送到 GitHub 也要完全权限**：`git` 走 schannel 时沙箱拿不到 TLS 凭据（`SEC_E_NO_CREDENTIALS`），`git credential fill` 也读不到 GCM 里存的 token。凭据已存在 Windows 凭据管理器（`gho_` 开头的 OAuth token，账号 fuyefusang），用完全权限跑 `git push` 即可，不需要重新登录。curl 访问 api.github.com 需要 `--ssl-no-revoke`（本机证书吊销检查会被拦）。
 
 ---
 
