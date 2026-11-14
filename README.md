@@ -336,13 +336,11 @@ java -cp "build\testcls;$env:ANDROID_SDK_ROOT\platforms\android-36\android.jar" 
 
 具体分工见 `HANDOFF.md` 的时间线。所有代码都是在作者的需求与审阅下新写的，没有从第三方项目复制（见上一节），因此这份 Apache-2.0 授权对整份代码有效。
 
-二次分发时保留这一段即可；如果你不喜欢 AI 署名的表述，改成「由 AI 辅助完成」也符合事实。
 
 ## 许可
 
 本项目采用 **Apache License 2.0**，见 [LICENSE](LICENSE) 与 [NOTICE](NOTICE)。
 
-选它而不是 GPL 的原因：APK 分发时 GPL 会要求把源码随包提供给每个收到安装包的人，这对一个「装完就用」的离线小工具是不必要的负担；Apache-2.0 宽松、可商用、可闭源二次开发，同时比 MIT 多两条对这个项目有用的东西——**明确的专利授权**和**商标不授权**（别人不能拿「铁记/IronLog」的名义发布改版）。
 
 你可以：
 
@@ -354,6 +352,6 @@ java -cp "build\testcls;$env:ANDROID_SDK_ROOT\platforms\android-36\android.jar" 
 - 用作者的名义或「铁记」商标为你的改版背书
 - 在分发时移除版权与许可声明
 
-> 想换成更短的 MIT：把 `LICENSE` 换成 MIT 全文、删掉 `NOTICE` 即可，本项目没有第三方代码，不涉及其他项目的条款。
 
-如果你打算上架应用商店或做成闭源产品，Apache-2.0 已经允许；这种情况下建议同时加上自己的隐私政策（本 App 不联网、不收集数据，写起来很轻）。
+
+
