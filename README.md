@@ -1,5 +1,9 @@
 # 铁记 IronLog
 
+[![release](https://img.shields.io/github/v/release/fuyefusang/ironlog?display_name=tag)](https://github.com/fuyefusang/ironlog/releases/latest)
+[![license](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
+[![size](https://img.shields.io/badge/apk-110.2%20KB-green)](https://github.com/fuyefusang/ironlog/releases/latest)
+
 一个完全离线的健身训练记录 App。**没有注册、没有登录、没有内购、没有广告、不联网**——装完打开就能用。
 
 这是独立实现的同类工具，不是对「训记」的修改版：代码、界面、图标全部新写，没有使用任何第三方 App 的代码或素材。
@@ -8,7 +12,11 @@
 
 ## 安装
 
-1. 把 `dist/IronLog-1.0.0.apk` 传到手机上（微信/QQ 传文件、数据线、网盘都行）。
+**最快**：到 [Releases](https://github.com/fuyefusang/ironlog/releases/latest) 下载 `IronLog-1.0.0.apk`（110 KB）。
+
+或者从源码构建后取 `dist/IronLog-1.0.0.apk`：
+
+1. 把 APK 传到手机上（微信/QQ 传文件、数据线、网盘都行）。
 2. 点开安装，首次会让你允许「安装未知来源应用」，允许即可。
 3. 桌面出现「铁记」图标，打开直接进入训练页。
 
