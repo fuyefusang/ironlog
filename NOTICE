@@ -1,0 +1,13 @@
+IronLog (铁记)
+Copyright 2026 IronLog contributors
+
+This product is licensed under the Apache License, Version 2.0.
+See the LICENSE file for the full license text.
+
+IronLog is an independent implementation of an offline workout log.
+It contains no code, icons, or other assets from third-party apps.
+
+Authorship
+  Product direction, requirements and review: the IronLog author (fuyefusang)
+  Implementation and on-device verification: DeepSeek Harness, an AI coding
+  agent running the deepseek-flash model (https://github.com/deepseek-ai)

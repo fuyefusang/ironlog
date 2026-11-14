@@ -1,0 +1,8 @@
+# 统一使用 LF，避免 Windows 上 checkout 后整仓库 diff 噪声
+* text=auto eol=lf
+
+*.apk binary
+*.png binary
+*.jar binary
+*.keystore binary
+*.zip binary

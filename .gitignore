@@ -1,0 +1,31 @@
+# build output
+build/
+*.class
+
+# dist 里只保留可直接安装的签名包，其余中间产物不入库
+dist/*
+!dist/IronLog-1.0.0.apk
+*.idsig
+
+# 签名材料（build.ps1 缺省时会重新生成调试 key）
+*.keystore
+*.jks
+
+# 模拟器素材：12 GB，绝不入库（构建/启动方式见 HANDOFF.md 第 6 节）
+tools/sdk/
+tools/avd/
+tools/emu-home/
+tools/*.zip
+tools/system-images/
+
+# ide
+.idea/
+*.iml
+.vscode/
+.gradle/
+local.properties
+
+# os
+.DS_Store
+Thumbs.db
+desktop.ini
