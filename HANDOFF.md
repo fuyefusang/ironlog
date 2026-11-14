@@ -40,7 +40,7 @@
 | 01:18–01:30 | 两项反馈 | ①选完动作后**不自动计时**，底部出现「开始训练 / 添加动作」，点开始才走表；首页「开始训练」旁加小「计划」按钮 ②**最近训练空白**：`Ui.col()` 默认 `MATCH_PARENT`，在水平行里挤掉左侧权重列 → 改显式 `WRAP_CONTENT` |
 | 01:30–01:35 | 模拟器验证（首次会话） | AEHD 加速在放行权限后可用；但 SDK 内两个系统镜像都缺 `system.img`；开始后台下载 `x86_64-30_r11.zip`，下到 439.5/645 MB 会话结束 |
 | 13:14–13:20 | **模拟器跑通** | Range 续传补齐 645 MB → 抽 `system.img`（3.2 GB）到工作区镜像目录 → 手写 AVD → `-sysdir` 指向工作区 + 完全权限启动（沙箱下 `.android` 与 AEHD 设备都不可写/不可开）→ `adb install` 成功 |
-| 13:20–13:35 | 逐页截图 | 44 张截图，见 `UI-VERIFICATION.md` 与 `screenshots/`。首次真机级验证覆盖首页/训练/选动作/详情/日历/数据/我的/身体数据/编辑计划/各类对话框/明暗主题/权限流程 |
+| 13:20–13:35 | 逐页截图 | 41 张截图，见 `UI-VERIFICATION.md` 与 `screenshots/`。首次真机级验证覆盖首页/训练/选动作/详情/日历/数据/我的/身体数据/编辑计划/各类对话框/明暗主题/权限流程 |
 | 13:35–13:55 | 修 4 个 UI 缺陷 | ①模板列表对话框不渲染（`setItems`+`setMessage` 冲突，功能阻塞）②折线图单点重复日期+圆点错位 ③AlertDialog 平台默认底与配色不搭、列表对话框丢「取消」④数字框聚焦后追加而非替换。新增 `Theme.IronLog.Dialog(.Light)`、`dialog_bg_*.xml`、`Dialogs.list()`。重建 110.2 KB 并回装复验 |
 | 15:47–16:05 | 换协议 + 准备开源 | 用户否决 GPL → 改 **Apache-2.0**（官方全文 11,358 B + `NOTICE`）。README 更新截图/验证/构建/限制章节；`.gitignore` 排除 12 GB 模拟器素材；`git init` 首次提交 |
 
@@ -66,7 +66,7 @@ dex      183 个类
 | 清单类存在于 dex | ✅ 构建时强制校验 |
 | 权限最小化 | ✅ 仅 VIBRATE / POST_NOTIFICATIONS / READ_CALENDAR / WRITE_CALENDAR，**无 INTERNET** |
 | 逻辑单元测试 | ✅ 755 条断言 |
-| **模拟器运行 + 逐页 UI 验证** | ✅ API 30 / x86_64 / AEHD，见 `UI-VERIFICATION.md` 与 44 张截图 |
+| **模拟器运行 + 逐页 UI 验证** | ✅ API 30 / x86_64 / AEHD，见 `UI-VERIFICATION.md` 与 41 张截图 |
 | API 35+ edge-to-edge / 预测性返回 | ❌ 只有 API 30 镜像 |
 | 通知与计划提醒端到端 | ❌ 未验证 |
 | 系统日历写入 | ⚠️ 权限流程通过；模拟器无日历账户，事件未落地 |
@@ -92,7 +92,7 @@ src/com/ironlog/train/
 res/drawable  26 个 VectorDrawable（18 个在用）+ dialog_bg_dark/light.xml
 res/values    colors.xml / strings.xml / styles.xml（含 Theme.IronLog.Dialog(.Light)）
 test/         StatsTest, CatalogTest（纯 JVM，无需 Android）
-screenshots/  44 张模拟器实拍截图，逐页验证用
+screenshots/  41 张模拟器实拍截图，逐页验证用
 tools/        镜像+AVD+启动/截图脚本（见第 6 节）
 ```
 
